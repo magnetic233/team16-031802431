@@ -1,0 +1,11 @@
+get_problem_json得到请求题目的文档和post地址
+postman得到返回的题目
+将其手动写入pronlem.json 
+
+运行getquestion 引导运行load和cut
+	load：读取problem文档并写入base64编码
+	cut读取编码并进行切图得到get的图
+
+ide运行HRD3X3进行计算
+HRD3X3 print提交文档
+网页手动提交文档
