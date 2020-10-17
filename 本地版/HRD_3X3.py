@@ -311,6 +311,22 @@ class baigei(QWidget):
         palette = QPalette()
         palette.setBrush(self.backgroundRole(), QBrush(QPixmap('img/pass.png')))
         self.setPalette(palette)
+        
+class guoguan(QWidget):
+    def __init__(self):
+        super().__init__()
+        self.initUI()
+    def initUI(self):
+       # 设置窗口的位置和大小
+        self.setFixedSize(680, 680)
+        # 设置窗口的标题
+        self.setWindowTitle('白给华容道')
+        #设置窗口的图标
+        self.setWindowIcon(QIcon('img/hrd.ico'))
+        #设置背景
+        palette = QPalette()
+        palette.setBrush(self.backgroundRole(), QBrush(QPixmap('img/lose.png')))
+        self.setPalette(palette)
 
 class yuantu(QWidget):
     def __init__(self):
@@ -334,10 +350,9 @@ if __name__ == '__main__':
     app = QApplication(sys.argv)
     ex = NumberHuaRong()
     roottu=yuantu()
-    
+    guoguan=guoguan()
     ex.buttonroot.clicked.connect(roottu.show)
     ex.buttonauto.clicked.connect(ex.running)
     ex.buttonmess.clicked.connect(ex.daluan)
-    
     count = 0
     sys.exit(app.exec_())
